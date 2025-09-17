@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anbu Raj | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000814;
+            color: #e0faff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .heading {
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0, 200, 255, 0.5);
+            animation: fadeInText 1.5s ease-out;
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background-color: rgba(0, 20, 50, 0.6);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 150, 255, 0.3);
+            border-radius: 25px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .skill-bubble {
+            background-color: rgba(0, 180, 216, 0.2);
+            border: 1px solid #00b4d8;
+            color: #b3e3f5;
+            padding: 0.6rem 1.4rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .skill-bubble:hover {
+            transform: scale(1.05);
+            background-color: rgba(0, 180, 216, 0.4);
+        }
+
+        /* Removed .profile-pic styling as the element is no longer needed */
+
+        /* Bubble background */
+        .bubbles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            background: rgba(0, 180, 216, 0.25);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0, 180, 216, 0.5);
+            animation: rise 20s infinite ease-in;
+        }
+
+        @keyframes rise {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0.6;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-110vh) scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bubbles">
+        <div class="bubble" style="width:40px; height:40px; left:10%; animation-duration:18s;"></div>
+        <div class="bubble" style="width:20px; height:20px; left:20%; animation-duration:12s; animation-delay:3s;"></div>
+        <div class="bubble" style="width:60px; height:60px; left:35%; animation-duration:25s; animation-delay:5s;"></div>
+        <div class="bubble" style="width:25px; height:25px; left:50%; animation-duration:15s; animation-delay:7s;"></div>
+        <div class="bubble" style="width:45px; height:45px; left:65%; animation-duration:20s; animation-delay:2s;"></div>
+        <div class="bubble" style="width:30px; height:30px; left:80%; animation-duration:17s; animation-delay:4s;"></div>
+        <div class="bubble" style="width:55px; height:55px; left:90%; animation-duration:22s; animation-delay:6s;"></div>
+    </div>
+
+    <nav class="flex justify-between items-center px-8 py-4 sticky top-0 bg-[#000814]/80 backdrop-blur-md z-50">
+        <h1 class="text-xl font-bold text-[#00b4d8]">Anbu Raj</h1>
+        <ul class="hidden md:flex gap-6">
+            <li><a href="#about" class="hover:text-[#00b4d8] rounded-md px-3 py-2 transition-colors">About</a></li>
+            <li><a href="#education" class="hover:text-[#00b4d8] rounded-md px-3 py-2 transition-colors">Education</a></li>
+            <li><a href="#skills" class="hover:text-[#00b4d8] rounded-md px-3 py-2 transition-colors">Skills</a></li>
+            <li><a href="#experience" class="hover:text-[#00b4d8] rounded-md px-3 py-2 transition-colors">Experience</a></li>
+            <li><a href="#projects" class="hover:text-[#00b4d8] rounded-md px-3 py-2 transition-colors">Projects</a></li>
+            <li><a href="#contact" class="hover:text-[#00b4d8] rounded-md px-3 py-2 transition-colors">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="py-20 text-center container mx-auto">
+        <h1 class="heading">Hi, I'm Anbu Raj</h1>
+        <p class="text-[#89cff0] text-lg mt-4 max-w-2xl mx-auto">
+            A passionate and Dedicated <strong>Project Engineer</strong> with over 5.5 years of experience in Golden Neon L.L.C, Advertise Company. I am skilled in leading teams, communicating goals, planning projects, and increasing efficiency. I am a hard-working project engineer who is willing to make and implement project decisions. A deadline-driven leader with a focus on proper safety, efficiency, and client satisfaction. I am presently looking for an opportunity in a well-reputed company, where I will be able to widen my experience and exploit my capabilities.
+        </p>
+    </header>
+
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-3xl font-bold text-[#00b4d8] mb-6">About Me</h2>
+            <div class="card">
+                <p class="text-lg">
+                    Innovative Mechanical Engineer who transforms progressive design visions into high-impact, technology-driven installations. An Experienced Project Engineer with extensive expertise executing large-scale digital signage and architectural display projects, combining mechanical insight with advanced project-management skills to deliver landmark installations that meet high quality, safety, and aesthetic standards in challenging environments that require precision engineering, creative problem-solving, and international teamwork.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-16">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-3xl font-bold text-[#00b4d8] mb-6">Education</h2>
+            <div class="space-y-8">
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-[#89cff0] mb-2">Anna University, Chennai</h3>
+                    <p class="text-sm text-gray-400">2012 - 2016</p>
+                    <p class="text-gray-300 mt-2">Bachelor of Engineering - Mechanical Engineering - 75%</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-[#89cff0] mb-2">Sri Ramakrishna Matriculation Higher Seconday School, Perambalur</h3>
+                    <p class="text-sm text-gray-400">2011 - 2012</p>
+                    <p class="text-gray-300 mt-2">Higher Secondary Education - 90.5%</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-[#89cff0] mb-2">Sri Ramakrishna Matriculation Higher Seconday School, Perambalur</h3>
+                    <p class="text-sm text-gray-400">2010 - 2011</p>
+                    <p class="text-gray-300 mt-2">Secondary School Leaving Certificate - 91%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-16">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-3xl font-bold text-[#00b4d8] mb-6">Skills</h2>
+            <div class="flex flex-wrap gap-4">
+                <span class="skill-bubble">Project Management</span>
+                <span class="skill-bubble">Team Leadership</span>
+                <span class="skill-bubble">Project Planning</span>
+                <span class="skill-bubble">Quality Control</span>
+                <span class="skill-bubble">Safety Management</span>
+                <span class="skill-bubble">Client Communication</span>
+                <span class="skill-bubble">Problem-Solving</span>
+                <span class="skill-bubble">Digital Signage</span>
+                <span class="skill-bubble">LED Screen Technology</span>
+                <span class="skill-bubble">AV Package Implementation</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-16">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-3xl font-bold text-[#00b4d8] mb-6">Experience</h2>
+            <div class="space-y-8">
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-[#89cff0] mb-2">Project Engineer - Golden Neon LLC, Dubai</h3>
+                    <p class="text-sm text-gray-400">December 2017 - Present</p>
+                    <p class="text-gray-300 mt-2">
+                        <strong>Duties & Responsibilities</strong>
+                    </p>
+                    <ul class="mt-4 list-disc list-inside space-y-2 text-gray-300">
+                        <li>Studied company profiles and operations to understand marketing needs and maintained a client database.</li>
+                        <li>Participated in and coordinated daily production and sales meetings.</li>
+                        <li>Reviewed and verified Bills of Quantities (BOQ) and drawings for material and man-hour costing to prepare estimates.</li>
+                        <li>Ensured effective planning and scheduling for production execution by preparing job flow, production, and installation load sheets, as well as master schedules.</li>
+                        <li>Ensured updated designs and BOQs were released to production.</li>
+                        <li>Developed and oversaw construction document timelines and submittals.</li>
+                        <li>Provided design concepts through documentation drawings for designated projects.</li>
+                        <li>Interacted daily with clients to interpret their needs and requirements and represented them in the field.</li>
+                        <li>Established, reported, and followed up on all non-conformance activities.</li>
+                        <li>Enforced relevant safety rules on-site and ensured staff under my responsibility used personal protective equipment.</li>
+                        <li>Attended coordination meetings organized by clients and consultants.</li>
+                        <li>Provided technical support to other site team members.</li>
+                        <li>Ensured projects met deadlines and company quality standards.</li>
+                        <li>Managed multiple projects simultaneously and worked independently with minimum supervision.</li>
+                        <li>Conducted daily briefings with site team leaders to follow up and report on work progress, anticipating any possible delays.</li>
+                        <li>Coordinated the handing over of completed works to clients and ensured necessary rectification work was finished.</li>
+                        <li>Coordinated and communicated effectively with the project manager and other project participants to provide assistance and technical support.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-[#89cff0] mb-2">Quality Control Inspector - Hyundai Motors India Limited (HMIL), Chennai</h3>
+                    <p class="text-sm text-gray-400">June 2016 - November 2017</p>
+                    <p class="text-gray-300 mt-2">Inspecting components and documents checking as requirements standard's.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-16">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-3xl font-bold text-[#00b4d8] mb-6">Projects</h2>
+            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-[#89cff0] mb-2">Emaar-Boulevard Point Plot 116 & 117</h3>
+                    <p class="text-sm text-gray-300">
+                        External Digital Screen Led Screen project under Arabian Constructions Company (ACC & Daktronics) Downtown Dubai Development Dubai.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-[#89cff0] mb-2">Emaar-Digital Signage Led Screen</h3>
+                    <p class="text-sm text-gray-300">
+                        Digital signage and LED screen project at Fountain View Entrance (Tower FV1) under Arabian Constructions Company (ACC & Daktronics) Downtown Dubai.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-[#89cff0] mb-2">Emaar-Opera Grand Dubai</h3>
+                    <p class="text-sm text-gray-300">
+                        Proposed Luxurious Residential Tower @ Plot 63a, under Consolidated & Contractors Company (CCC) Burj Khalifa –Downtown Dubai.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-[#89cff0] mb-2">Emaar-Timeout Market Refurbishment</h3>
+                    <p class="text-sm text-gray-300">
+                        Signage & Digital Led Screen project at Souk Al Bahar & Emaar Sales Centre under Dutco Constructions & Daktronics.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-[#89cff0] mb-2">Emaar-Forte Towers (D1D2)</h3>
+                    <p class="text-sm text-gray-300">
+                        Project under Target Engineering Constructions Co. LLC- Downtown Dubai Development Dubai.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-[#89cff0] mb-2">Shoba Constructions</h3>
+                    <p class="text-sm text-gray-300">
+                        Greens Apartment Phase 2 & Creek Vistas projects in Al Merkadh, Dubai.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-[#89cff0] mb-2">Sharjah Sustainable City</h3>
+                    <p class="text-sm text-gray-300">
+                        Sustainable city project on Plot no.670-At Umm Fannin-Sharjah.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-[#89cff0] mb-2">SRG Properties</h3>
+                    <p class="text-sm text-gray-300">
+                        Projects for Stay Bridge Suites-Financial Centre | Internet City | Burj Al Salam Hotels-Dubai.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-[#89cff0] mb-2">SRG Holding Limited</h3>
+                    <p class="text-sm text-gray-300">
+                        Commercial & Residential Building projects including Jumeriah Garden City, Adeo Living-Upside, ADL, AAM, and JAR.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-[#89cff0] mb-2">Miral-Arena Works</h3>
+                    <p class="text-sm text-gray-300">
+                        Signage & AV Package for Yas South Integrated Destination Resort (IDR) under Bam International - Abu Dhabi.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-[#89cff0] mb-2">National Investment Corporation (NIC)</h3>
+                    <p class="text-sm text-gray-300">
+                        Project for Fairmont Hotel & Serviced Apartments -Abu Dhabi.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-[#89cff0] mb-2">Aldar Properties</h3>
+                    <p class="text-sm text-gray-300">
+                        Signage & Wayfinding project for Mamsha Al Saadiyat under Provis, and Customer Journey Projects at Yas Mall, Al Muneera, and Marsha Al Bateen under M4 Contracting SARL.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-[#89cff0] mb-2">Alta Real Estate Development</h3>
+                    <p class="text-sm text-gray-300">
+                        Commercial & Residential Building projects for Mr. C Residence canal under Dubai Dawn Distinguished Construction.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-3xl font-bold text-[#00b4d8] mb-6">Contact</h2>
+            <div class="card">
+                <p class="text-lg">Let's Connect! You can reach me via email or phone</p>
+                <ul class="mt-4 space-y-2">
+                    <li>Email: <a href="mailto:anbu58575@gmail.com" class="text-[#00b4d8] hover:underline">anbu58575@gmail.com</a></li>
+                    <li>Phone: <a href="tel:+971543261767" class="text-[#00b4d8] hover:underline">+971 543261767</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-6 border-t border-[#00b4d8]/30">
+        <p class="text-sm">anbu58575@gmail.com | +971 543261767</p>
+    </footer>
+</body>
+</html>
